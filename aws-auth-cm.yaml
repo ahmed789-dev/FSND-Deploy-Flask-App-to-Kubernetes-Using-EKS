@@ -6,7 +6,7 @@ metadata:
 data:
   mapRoles: |
     - rolearn: <ARN of instance role (not instance profile)>
-      username: system:node:{{EC2PrivateDNSName}}
+      username: system:node:ip-192-168-18-119.us-west-2.compute.internal
       groups:
         - system:bootstrappers
         - system:nodes
