@@ -30,7 +30,7 @@ Parameters:
     MaxLength: 100
     ConstraintDescription: You must enter a GitHub repository branch name
 
-  GitHubToken:
+  GitHubToken: 18fdaeceafafdaad6200d32d37cb95a77d8e344f
     Type: String
     NoEcho: true
     Description: GitHub API token - see https://github.com/blog/1509-personal-api-tokens
