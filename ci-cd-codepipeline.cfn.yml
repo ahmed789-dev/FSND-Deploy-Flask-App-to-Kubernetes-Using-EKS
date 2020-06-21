@@ -6,7 +6,7 @@ Description: EKSWSV1
 
 Parameters:
 
-    EksClusterName: simple-jwt-api
+  EksClusterName:
     Type: String
     Description: The name of the EKS cluster created
     Default: simple-jwt-api
@@ -14,15 +14,15 @@ Parameters:
     MaxLength: 100
     ConstraintDescription: You must enter the EKS cluster name
 
-    GitSourceRepo: FSND-Deploy-Flask-App-to-Kubernetes-Using-EKS
+  GitSourceRepo:
     Type: String
     Description: GitHub source repository - must contain a Dockerfile and buildspec.yml in the base
-    Default: Flask-App-to-Kubernetes-Docker-Using-EKS-master
+    Default: FSND-Deploy-Flask-App-to-Kubernetes-Using-EKS
     MinLength: 1
     MaxLength: 100
     ConstraintDescription: You must enter a GitHub repository name
 
-    GitBranch: master
+  GitBranch:
     Type: String
     Default: master
     Description: GitHub git repository branch - change triggers a new build
@@ -30,7 +30,7 @@ Parameters:
     MaxLength: 100
     ConstraintDescription: You must enter a GitHub repository branch name
 
-    GitHubToken: 18fdaeceafafdaad6200d32d37cb95a77d8e344f
+  GitHubToken:
     Type: String
     NoEcho: true
     Description: GitHub API token - see https://github.com/blog/1509-personal-api-tokens
@@ -38,15 +38,15 @@ Parameters:
     MaxLength: 100
     ConstraintDescription: You must enter a GitHub personal access token
 
-    GitHubUser: ahmed789-dev
+  GitHubUser:
     Type: String
-    Default: darwinlenin
+    Default: ahmed789-dev
     Description: GitHub username or organization
     MinLength: 3
     MaxLength: 100
     ConstraintDescription: You must enter a GitHub username or organization
 
-    CodeBuildDockerImage: aws/codebuild/docker:17.09.0
+  CodeBuildDockerImage:
     Type: String
     Default: aws/codebuild/docker:17.09.0
     Description: Default AWS CodeBuild Docker optimized image
@@ -54,7 +54,7 @@ Parameters:
     MaxLength: 100
     ConstraintDescription: You must enter a CodeBuild Docker image
 
-    KubectlRoleName: UdacityFlaskDeployCBKubectlRole
+  KubectlRoleName:
     Type: String
     Default: UdacityFlaskDeployCBKubectlRole
     Description: IAM role used by kubectl to interact with EKS cluster

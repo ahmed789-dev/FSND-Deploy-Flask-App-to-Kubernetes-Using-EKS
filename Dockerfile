@@ -10,10 +10,8 @@ WORKDIR /app
 RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 RUN pip install flask
-#RUN pip install pytest
 RUN pip install jwt
 RUN pip install gunicorn
-#RUN pip install fcntl
 
 #ENTRYPOINT ["python","main.py"]
 
